@@ -12,6 +12,7 @@ name = "pytorch_cpu"
 torch = {version = "*", index = "pytorch_cpu"}
 torchvision = {version = "*", index = "pytorch_cpu"}
 torchaudio = {version = "*", index = "pytorch_cpu"}
+jupyterlab = "*"
 
 [dev-packages]
 
