@@ -5,22 +5,22 @@ digraph {
   rankdir=LR
 
   /* Entities */
-  x0 [label="1", shape=square]
-  x1 [label="x1", shape=plain]
-  x2 [label="x2", shape=plain]
-  x3 [label="x3", shape=plain]
-  x4 [label="x4", shape=plain]
+  x0 [label="1", texlbl="$1$", shape=square]
+  x1 [label="x1", texlbl="$x_1$", shape=plain]
+  x2 [label="x2", texlbl="$x_2$", shape=plain]
+  x3 [label="x3", texlbl="$x_3$", shape=plain]
+  x4 [label="x4", texlbl="$x_4$", shape=plain]
 
-  m2 [label="w.x"]
+  m2 [label="w.x", texlbl="$\langle w,x \rangle$"]
 
-  y3 [label="f(w.x)", shape=plain]
+  y3 [label="f(w.x)", texlbl="$f(\langle w,x \rangle)$", shape=plain]
 
   /* Relationships */
-  x0 -> m2 [label="w0"]
-  x1 -> m2 [label="w1"]
-  x2 -> m2 [label="w2"]
-  x3 -> m2 [label="w3"]
-  x4 -> m2 [label="w4"]
+  x0 -> m2 [label="w0", texlbl="$w_0$"]
+  x1 -> m2 [label="w1", texlbl="$w_1$"]
+  x2 -> m2 [label="w2", texlbl="$w_2$"]
+  x3 -> m2 [label="w3", texlbl="$w_3$"]
+  x4 -> m2 [label="w4", texlbl="$w_4$"]
 
   m2 -> y3
 
