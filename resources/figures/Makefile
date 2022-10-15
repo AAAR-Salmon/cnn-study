@@ -6,7 +6,7 @@ neural_network.png: neural_network.dot
 	dot -o $@ -T png $<
 
 artificial_neuron.png: artificial_neuron.tex.dot
-	pipenv run dot2tex $< > $(<:%.tex.dot=%.tex)
+	pipenv run dot2tex --crop --margin "0.1in" $< > $(<:%.tex.dot=%.tex)
 	lualatex $(<:%.tex.dot=%.tex)
 	pdftoppm -png -singlefile $(<:%.tex.dot=%.pdf) $(@:%.png=%)
 
