@@ -11,7 +11,7 @@ artificial_neuron.png: artificial_neuron.tex.dot
 	pdftoppm -png -singlefile $(<:%.tex.dot=%.pdf) $(@:%.png=%)
 
 distclean: clean
-	@rm *.png
+	rm *.png 2>/dev/null || true
 
 clean:
-	@rm *.aux *.log *.pdf *.tex
+	rm *.aux *.log *.pdf *.tex 2>/dev/null || true
