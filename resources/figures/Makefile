@@ -1,4 +1,4 @@
-.PHONY: all clean
+.PHONY: all distclean clean
 
 all: neural_network.png artificial_neuron.png
 
@@ -10,5 +10,8 @@ artificial_neuron.png: artificial_neuron.tex.dot
 	lualatex $(<:%.tex.dot=%.tex)
 	pdftoppm -png -singlefile $(<:%.tex.dot=%.pdf) $(@:%.png=%)
 
+distclean: clean
+	@rm *.png
+
 clean:
-	@rm *.aux *.log *.pdf *.png *.tex
+	@rm *.aux *.log *.pdf *.tex
